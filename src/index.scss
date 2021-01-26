@@ -18,7 +18,7 @@ code {
 
 /**** Nav ****/
 .top-nav {
-  padding: 0.55rem 1rem;
+  padding: 0.45rem 1rem;
   text-transform: capitalize;
 
   ul {
@@ -35,7 +35,7 @@ code {
     width: 100%;
     border: 1px solid #eee;
     border-width: 0 0 1px 0;
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 0;
     background-color: #fff;
     cursor: pointer;
   }
@@ -46,14 +46,15 @@ code {
 
   .copy-bar {
     position: relative;
+    width: 16.9rem;
     > button {
       background-color: #000;
       color: #fff;
       border: 0;
+      border-radius: 0.2rem;
     }
     .triangle {
-      margin-left: 1.1rem;
-      margin-right: 0.3rem;
+      margin-left: 1rem;
     }
   }
 
@@ -67,6 +68,7 @@ code {
       border-radius: 0.2rem 0.2rem 0 0;
     }
     li:last-of-type button {
+      border: 0;
       border-radius: 0 0 0.2rem 0.2rem;
     }
   }

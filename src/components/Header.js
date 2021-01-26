@@ -1,10 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useGlobalContext } from '../context'
 
 export default function Header() {
-  const [hasShownSubmenu, setHasShownSubmenu] = useState(false)
-  const { selectedColorFormat, submenuItems, setSelectedColorFormat } = useGlobalContext()
-  console.log(useGlobalContext())
+  const {
+    hasShownSubmenu,
+    setHasShownSubmenu,
+    selectedColorFormat,
+    submenuItems,
+    setSelectedColorFormat,
+  } = useGlobalContext()
+
+  const selectColorFormat = (item) => {
+    setSelectedColorFormat(item)
+    setHasShownSubmenu(false)
+  }
+
   return (
     <>
       <nav className="top-nav">
@@ -12,6 +22,7 @@ export default function Header() {
           <li>&larr; back</li>
           <li className="copy-bar">
             <button
+              className="format-btn"
               type="button"
               aria-haspopup="true"
               aria-expanded="false"
@@ -31,7 +42,11 @@ export default function Header() {
             <ul className={`submenu ${hasShownSubmenu && 'submenu-show'}`}>
               {submenuItems.map((item) => (
                 <li key={item}>
-                  <button type="button" onClick={() => setSelectedColorFormat(item)}>
+                  <button
+                    className="format-btn"
+                    type="button"
+                    onClick={() => selectColorFormat(item)}
+                  >
                     {item}
                   </button>
                 </li>
@@ -45,7 +60,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <p style={{ backgroundColor: 'lightgreen' }}>
+      <p style={{ backgroundColor: 'yellow' }}>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, earum? Doloribus
         consequuntur eaque earum cum expedita numquam laborum sint. Omnis porro incidunt dolorum
         nostrum doloremque iure ullam quae a soluta, accusamus debitis quod mollitia corporis!
