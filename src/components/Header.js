@@ -3,6 +3,8 @@ import { useGlobalContext } from '../context'
 
 export default function Header() {
   const {
+    isSoundOn,
+    setIsSoundOn,
     hasShownSubmenu,
     setHasShownSubmenu,
     selectedColorFormat,
@@ -19,7 +21,7 @@ export default function Header() {
     <>
       <nav className="top-nav">
         <ul>
-          <li>&larr; back</li>
+          <li />
           <li className="copy-bar">
             <button
               className="format-btn"
@@ -54,8 +56,9 @@ export default function Header() {
             </ul>
           </li>
           <li className="sound-btn">
-            <button type="button">
-              sound on <span aria-hidden="true">🔊</span>
+            <button type="button" onClick={() => setIsSoundOn((prevState) => !prevState)}>
+              sound {isSoundOn ? 'on' : 'off'}{' '}
+              <span aria-hidden="true">{isSoundOn ? '🔊' : '🔇'}</span>
             </button>
           </li>
         </ul>

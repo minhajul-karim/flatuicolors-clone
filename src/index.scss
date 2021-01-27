@@ -44,6 +44,10 @@ code {
     outline: blue thin dotted;
   }
 
+  button > span {
+    pointer-events: none;
+  }
+
   .copy-bar {
     position: relative;
     width: 16.9rem;
@@ -81,6 +85,7 @@ code {
   }
 
   .sound-btn button {
+    width: 6.5rem;
     background-color: transparent;
     border: 0;
   }
