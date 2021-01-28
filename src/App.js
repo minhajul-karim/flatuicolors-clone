@@ -1,5 +1,6 @@
-import Header from './components/Header'
 import { useGlobalContext } from './context'
+import Header from './components/Header'
+import Palettes from './components/Palettes'
 
 function App() {
   const { setHasShownSubmenu } = useGlobalContext()
@@ -15,6 +16,7 @@ function App() {
       }}
     >
       <Header />
+      <Palettes />
     </div>
   )
 }

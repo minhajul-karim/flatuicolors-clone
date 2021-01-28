@@ -112,8 +112,3 @@ body {
     }
   }
 }
-
-.test {
-  height: calc(100vh - #{$nav-height});
-  background: red;
-}
