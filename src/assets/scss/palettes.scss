@@ -1,12 +1,44 @@
 /*** Palette container ***/
 $nav-height: 3.125rem;
-$medium-screen: 1024px;
+$laptop-screen: 1024px;
+$tablet-screen: 768px;
+$mobile-screen: 576px;
+
+@mixin respond-to-screen($breakpoint) {
+  @if $breakpoint == laptop {
+    @media (max-width: $laptop-screen) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: $tablet-screen) {
+      @content;
+    }
+  }
+  @if $breakpoint == mobile {
+    @media (max-width: $mobile-screen) {
+      @content;
+    }
+  }
+}
 
 .palette-container {
   height: calc(100vh - #{$nav-height});
   display: grid;
   grid-template-columns: repeat(5, minmax(100px, 1fr));
   grid-template-rows: repeat(4, minmax(100px, 1fr));
+  @include respond-to-screen(laptop) {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-rows: repeat(5, minmax(100px, 1fr));
+  }
+  @include respond-to-screen(tablet) {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(7, minmax(100px, 1fr));
+  }
+  @include respond-to-screen(mobile) {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    grid-template-rows: repeat(20, minmax(100px, 1fr));
+  }
 
   .single-grid-cell {
     cursor: pointer;
@@ -16,7 +48,8 @@ $medium-screen: 1024px;
     align-items: center;
     text-transform: uppercase;
     &:hover .copy-btn {
-      display: block;
+      visibility: visible;
+      opacity: 1;
     }
   }
 
@@ -30,8 +63,9 @@ $medium-screen: 1024px;
     border: 2px solid hsla(0, 0%, 100%, 0.2);
     border-radius: 0.3rem;
     color: #fff;
-    display: none;
-    transition: 2s;
+    visibility: hidden;
+    opacity: 0.5;
+    transition: visibility 0s, opacity 0.3s linear;
   }
 
   .color-name {
