@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
 
-body {
-  font-family: 'Barlow', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+$nav-height: 3.125rem;
+$small-screen: 576px;
+
+@mixin respond-small-screen {
+  @media (max-width: $small-screen) {
+    @content;
+  }
 }
 
 * {
@@ -11,20 +14,25 @@ body {
   padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Barlow', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /**** Nav ****/
 .top-nav {
-  padding: 0.45rem 1rem;
   text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $nav-height;
+  padding: 0 1.25rem;
+  @include respond-small-screen {
+    padding: 0 0.3rem;
+  }
 
   ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     list-style: none;
   }
 
@@ -32,7 +40,6 @@ code {
     font-family: 'Barlow', sans-serif;
     text-transform: capitalize;
     font-size: 1rem;
-    width: 100%;
     border: 1px solid #eee;
     border-width: 0 0 1px 0;
     padding: 0.5rem 0;
@@ -51,11 +58,15 @@ code {
   .copy-bar {
     position: relative;
     width: 16.9rem;
+    @include respond-small-screen {
+      width: 15.9rem;
+    }
     > button {
       background-color: #000;
       color: #fff;
       border: 0;
       border-radius: 0.2rem;
+      width: 100%;
     }
     .triangle {
       margin-left: 1rem;
@@ -68,6 +79,9 @@ code {
     left: 0;
     right: 0;
     top: 150%;
+    button {
+      width: 100%;
+    }
     li:first-of-type button {
       border-radius: 0.2rem 0.2rem 0 0;
     }
@@ -84,9 +98,22 @@ code {
     }
   }
 
-  .sound-btn button {
+  .sound-btn {
     width: 6.5rem;
-    background-color: transparent;
     border: 0;
+    @include respond-small-screen {
+      width: 1rem !important;
+    }
   }
+
+  .sound-text {
+    @include respond-small-screen {
+      display: none;
+    }
+  }
+}
+
+.test {
+  height: calc(100vh - #{$nav-height});
+  background: red;
 }

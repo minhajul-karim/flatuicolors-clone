@@ -20,8 +20,8 @@ export default function Header() {
   return (
     <>
       <nav className="top-nav">
+        <p className="back-button" />
         <ul>
-          <li />
           <li className="copy-bar">
             <button
               className="format-btn"
@@ -55,14 +55,21 @@ export default function Header() {
               ))}
             </ul>
           </li>
-          <li className="sound-btn">
-            <button type="button" onClick={() => setIsSoundOn((prevState) => !prevState)}>
-              sound {isSoundOn ? 'on' : 'off'}{' '}
-              <span aria-hidden="true">{isSoundOn ? '🔊' : '🔇'}</span>
-            </button>
-          </li>
         </ul>
+        <button
+          className="sound-btn"
+          type="button"
+          onClick={() => setIsSoundOn((prevState) => !prevState)}
+        >
+          {isSoundOn ? (
+            <span className="sound-text">sound on</span>
+          ) : (
+            <span className="sound-text">sound off</span>
+          )}{' '}
+          <span aria-hidden="true">{isSoundOn ? '🔊' : '🔇'}</span>
+        </button>
       </nav>
+      <div className="test" />
     </>
   )
 }
