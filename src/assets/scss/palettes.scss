@@ -65,7 +65,11 @@ $mobile-screen: 576px;
     color: #fff;
     visibility: hidden;
     opacity: 0.5;
-    transition: visibility 0s, opacity 0.3s linear;
+    transition: visibility 0s, opacity 0.3s linear, transform 0.1s;
+  }
+
+  .copy-btn:active {
+    transform: scale(0.98);
   }
 
   .color-name {

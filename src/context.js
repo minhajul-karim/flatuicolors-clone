@@ -1,7 +1,24 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react'
 
 const AppContext = createContext()
-const colorFormats = ['HEX (#AA1923)', 'HEX (AA1923)', 'RGB - (1,2,3)', 'RGBA - (1,2,3,0.4)']
+const colorFormats = [
+  {
+    name: 'hex',
+    description: 'HEX (#AA1923)',
+  },
+  {
+    name: 'hexClean',
+    description: 'HEX (AA1923)',
+  },
+  {
+    name: 'rgb',
+    description: 'RGB - (1,2,3)',
+  },
+  {
+    name: 'rgba',
+    description: 'RGBA - (1,2,3,0.4)',
+  },
+]
 
 export const AppProvider = ({ children }) => {
   const [hasShownSubmenu, setHasShownSubmenu] = useState(false)
@@ -9,7 +26,7 @@ export const AppProvider = ({ children }) => {
   const [selectedColorFormat, setSelectedColorFormat] = useState(colorFormats[0])
   // Excludes selectedColorFormat from colorFormats
   const filterColorFormats = useCallback(
-    () => colorFormats.filter((format) => format !== selectedColorFormat),
+    () => colorFormats.filter((format) => format.description !== selectedColorFormat.description),
     [selectedColorFormat]
   )
   const [submenuItems, setSubmenuItems] = useState(filterColorFormats())

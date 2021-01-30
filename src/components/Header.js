@@ -24,13 +24,13 @@ export default function Header() {
       <ul>
         <li className="copy-bar">
           <button
-            className="format-btn"
+            className="format-btn main-btn"
             type="button"
             aria-haspopup="true"
             aria-expanded="false"
             onClick={() => setHasShownSubmenu((prevState) => !prevState)}
           >
-            copy format: {selectedColorFormat}
+            copy format: {selectedColorFormat.description}
             {hasShownSubmenu ? (
               <span aria-hidden="true" className="triangle">
                 &#x025B4;
@@ -42,17 +42,20 @@ export default function Header() {
             )}
           </button>
           <ul className={`submenu ${hasShownSubmenu && 'submenu-show'}`}>
-            {submenuItems.map((item) => (
-              <li key={item}>
-                <button
-                  className="format-btn"
-                  type="button"
-                  onClick={() => selectColorFormat(item)}
-                >
-                  {item}
-                </button>
-              </li>
-            ))}
+            {submenuItems.map((colorFormat) => {
+              const { description } = colorFormat
+              return (
+                <li key={description}>
+                  <button
+                    className="format-btn"
+                    type="button"
+                    onClick={() => selectColorFormat(colorFormat)}
+                  >
+                    {description}
+                  </button>
+                </li>
+              )
+            })}
           </ul>
         </li>
       </ul>
