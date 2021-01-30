@@ -1,6 +1,6 @@
 import React from 'react'
-import { useGlobalContext } from '../context'
 import '../assets/scss/header.scss'
+import { useGlobalContext } from '../context'
 
 export default function Header() {
   const {
@@ -62,7 +62,9 @@ export default function Header() {
       <button
         className="sound-btn"
         type="button"
-        onClick={() => setIsSoundOn((prevState) => !prevState)}
+        onClick={() => {
+          setIsSoundOn((prevState) => !prevState)
+        }}
       >
         {isSoundOn ? (
           <span className="sound-text">sound on</span>
