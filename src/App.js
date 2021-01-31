@@ -9,10 +9,11 @@ import Success from './components/Success'
 function App() {
   const { setHasShownSubmenu, showSuccessMsg, setShowSuccessMsg, color } = useGlobalContext()
 
+  // Display success message for a second
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowSuccessMsg(false)
-    }, 2000)
+    }, 1000)
     return () => clearTimeout(timeoutId)
   }, [setShowSuccessMsg, showSuccessMsg])
 
