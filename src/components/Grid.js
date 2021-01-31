@@ -10,12 +10,14 @@ import copySound from '../assets/sounds/copy_sound.m4a'
 
 export default function Grid({ color }) {
   const { name, hex } = color
-  const { selectedColorFormat, isSoundOn } = useGlobalContext()
+  const { selectedColorFormat, isSoundOn, setColor, setShowSuccessMsg } = useGlobalContext()
   const soundTrackRef = useRef(null)
 
   // Copy code to clipboard and play sound
   const copyHandler = () => {
     navigator.clipboard.writeText(color[selectedColorFormat.name])
+    setColor(color)
+    setShowSuccessMsg(true)
     isSoundOn && soundTrackRef.current.play()
   }
 

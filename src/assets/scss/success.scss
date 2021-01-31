@@ -1,0 +1,38 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-msg {
+  width: 100%;
+  background: hsla(0, 0%, 100%, 0.2);
+  margin-bottom: 3.8rem; //
+  position: relative;
+}
+
+.success-msg {
+  text-shadow: 2px 2px #2c3e50;
+  h1 {
+    font-size: 7.5rem;
+    line-height: 6.875rem;
+    padding: 2.2rem 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  p {
+    font-size: 2rem;
+    color: #fff;
+  }
+}
+
+.color-code {
+  position: absolute;
+  left: 0;
+  top: 135%;
+  width: 100%;
+  text-align: center;
+}

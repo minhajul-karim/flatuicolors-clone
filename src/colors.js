@@ -5,7 +5,7 @@ export const colors = [
     hex: '#1abc9c',
     hexClean: '1abc9c',
     rgb: 'rgb(26, 188, 156)',
-    rgba: 'rgba(26, 188, 156,1.0)',
+    rgba: 'rgba(26, 188, 156, 1.0)',
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const colors = [
     hex: '#2ecc71',
     hexClean: '2ecc71',
     rgb: 'rgb(46, 204, 113)',
-    rgba: 'rgba(46, 204, 113,1.0)',
+    rgba: 'rgba(46, 204, 113, 1.0)',
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const colors = [
     hex: '#3498db',
     hexClean: '3498db',
     rgb: 'rgb(52, 152, 219)',
-    rgba: 'rgba(52, 152, 219,1.0)',
+    rgba: 'rgba(52, 152, 219, 1.0)',
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const colors = [
     hex: '#9b59b6',
     hexClean: '9b59b6',
     rgb: 'rgb(155, 89, 182)',
-    rgba: 'rgba(155, 89, 182,1.0)',
+    rgba: 'rgba(155, 89, 182, 1.0)',
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const colors = [
     hex: '#34495e',
     hexClean: '34495e',
     rgb: 'rgb(52, 73, 94)',
-    rgba: 'rgba(52, 73, 94,1.0)',
+    rgba: 'rgba(52, 73, 94, 1.0)',
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const colors = [
     hex: '#16a085',
     hexClean: '16a085',
     rgb: 'rgb(22, 160, 133)',
-    rgba: 'rgba(22, 160, 133,1.0)',
+    rgba: 'rgba(22, 160, 133, 1.0)',
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const colors = [
     hex: '#27ae60',
     hexClean: '27ae60',
     rgb: 'rgb(39, 174, 96)',
-    rgba: 'rgba(39, 174, 96,1.0)',
+    rgba: 'rgba(39, 174, 96, 1.0)',
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const colors = [
     hex: '#2980b9',
     hexClean: '2980b9',
     rgb: 'rgb(41, 128, 185)',
-    rgba: 'rgba(41, 128, 185,1.0)',
+    rgba: 'rgba(41, 128, 185, 1.0)',
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const colors = [
     hex: '#8e44ad',
     hexClean: '8e44ad',
     rgb: 'rgb(142, 68, 173)',
-    rgba: 'rgba(142, 68, 173,1.0)',
+    rgba: 'rgba(142, 68, 173, 1.0)',
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const colors = [
     hex: '#2c3e50',
     hexClean: '2c3e50',
     rgb: 'rgb(44, 62, 80)',
-    rgba: 'rgba(44, 62, 80,1.0)',
+    rgba: 'rgba(44, 62, 80, 1.0)',
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export const colors = [
     hex: '#f1c40f',
     hexClean: 'f1c40f',
     rgb: 'rgb(241, 196, 15)',
-    rgba: 'rgba(241, 196, 15,1.0)',
+    rgba: 'rgba(241, 196, 15, 1.0)',
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ export const colors = [
     hex: '#e67e22',
     hexClean: 'e67e22',
     rgb: 'rgb(230, 126, 34)',
-    rgba: 'rgba(230, 126, 34,1.0)',
+    rgba: 'rgba(230, 126, 34, 1.0)',
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ export const colors = [
     hex: '#e74c3c',
     hexClean: 'e74c3c',
     rgb: 'rgb(231, 76, 60)',
-    rgba: 'rgba(231, 76, 60,1.0)',
+    rgba: 'rgba(231, 76, 60, 1.0)',
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ export const colors = [
     hex: '#ecf0f1',
     hexClean: 'ecf0f1',
     rgb: 'rgb(236, 240, 241)',
-    rgba: 'rgba(236, 240, 241,1.0)',
+    rgba: 'rgba(236, 240, 241, 1.0)',
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ export const colors = [
     hex: '#95a5a6',
     hexClean: '95a5a6',
     rgb: 'rgb(149, 165, 166)',
-    rgba: 'rgba(149, 165, 166,1.0)',
+    rgba: 'rgba(149, 165, 166, 1.0)',
   },
   {
     id: 16,
@@ -125,7 +125,7 @@ export const colors = [
     hex: '#f39c12',
     hexClean: 'f39c12',
     rgb: 'rgb(243, 156, 18)',
-    rgba: 'rgba(243, 156, 18,1.0)',
+    rgba: 'rgba(243, 156, 18, 1.0)',
   },
   {
     id: 17,
@@ -133,7 +133,7 @@ export const colors = [
     hex: '#d35400',
     hexClean: 'd35400',
     rgb: 'rgb(211, 84, 0)',
-    rgba: 'rgba(211, 84, 0,1.0)',
+    rgba: 'rgba(211, 84, 0, 1.0)',
   },
   {
     id: 18,
@@ -141,7 +141,7 @@ export const colors = [
     hex: '#c0392b',
     hexClean: 'c0392b',
     rgb: 'rgb(192, 57, 43)',
-    rgba: 'rgba(192, 57, 43,1.0)',
+    rgba: 'rgba(192, 57, 43, 1.0)',
   },
   {
     id: 19,
@@ -149,7 +149,7 @@ export const colors = [
     hex: '#bdc3c7',
     hexClean: 'bdc3c7',
     rgb: 'rgb(189, 195, 199)',
-    rgba: 'rgba(189, 195, 199,1.0)',
+    rgba: 'rgba(189, 195, 199, 1.0)',
   },
   {
     id: 20,
@@ -157,6 +157,6 @@ export const colors = [
     hex: '#7f8c8d',
     hexClean: '7f8c8d',
     rgb: 'rgb(127, 140, 141)',
-    rgba: 'rgba(127, 140, 141,1.0)',
+    rgba: 'rgba(127, 140, 141, 1.0)',
   },
 ]

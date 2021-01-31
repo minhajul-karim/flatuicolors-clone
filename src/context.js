@@ -24,12 +24,14 @@ export const AppProvider = ({ children }) => {
   const [hasShownSubmenu, setHasShownSubmenu] = useState(false)
   const [isSoundOn, setIsSoundOn] = useState(true)
   const [selectedColorFormat, setSelectedColorFormat] = useState(colorFormats[0])
+  const [color, setColor] = useState({})
   // Excludes selectedColorFormat from colorFormats
   const filterColorFormats = useCallback(
     () => colorFormats.filter((format) => format.description !== selectedColorFormat.description),
     [selectedColorFormat]
   )
   const [submenuItems, setSubmenuItems] = useState(filterColorFormats())
+  const [showSuccessMsg, setShowSuccessMsg] = useState(false)
 
   useEffect(() => {
     setSubmenuItems(filterColorFormats())
@@ -45,6 +47,10 @@ export const AppProvider = ({ children }) => {
         selectedColorFormat,
         submenuItems,
         setSelectedColorFormat,
+        color,
+        setColor,
+        showSuccessMsg,
+        setShowSuccessMsg,
       }}
     >
       {children}
