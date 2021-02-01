@@ -1,32 +1,89 @@
+@keyframes out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes in {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .container {
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #3498db;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.animateIn {
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-name: in;
+  animation-fill-mode: both;
+}
+
+.animateOut {
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-name: out;
+  animation-fill-mode: both;
+}
+
+.show-success-msg {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .success-msg {
   width: 100%;
   background: hsla(0, 0%, 100%, 0.2);
-  margin-bottom: 3.8rem; //
+  margin-bottom: 3.8rem;
   position: relative;
+  text-shadow: 2px 2px #2c3e50;
 }
 
-.success-msg {
-  text-shadow: 2px 2px #2c3e50;
-  h1 {
-    font-size: 7.5rem;
-    line-height: 6.875rem;
-    padding: 2.2rem 0;
-    color: #fff;
-    text-align: center;
-  }
+.success-msg h1 {
+  font-size: 7.5rem;
+  line-height: 6.875rem;
+  padding: 2.2rem 0;
+  color: #fff;
+  text-align: center;
+}
 
-  p {
-    font-size: 2rem;
-    color: #fff;
-  }
+.success-msg p {
+  font-size: 2rem;
+  color: #fff;
 }
 
 .color-code {

@@ -4,16 +4,19 @@
 /* Grid cells are not tabbable */
 
 import { useGlobalContext } from '../context'
+import copySound from '../assets/sounds/copy_sound.m4a'
 
 export default function Grid({ color }) {
   const { name, hex } = color
-  const { selectedColorFormat, setColor, setShowSuccessMsg } = useGlobalContext()
+  const { selectedColorFormat, setColor, setShowSuccessMsg, isSoundOn } = useGlobalContext()
 
   // Copy code to clipboard
   const copyHandler = () => {
     navigator.clipboard.writeText(color[selectedColorFormat.name])
     setColor(color)
     setShowSuccessMsg(true)
+    const audio = new Audio(copySound)
+    isSoundOn && audio.play()
   }
 
   return (
