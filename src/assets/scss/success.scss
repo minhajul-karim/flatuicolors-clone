@@ -39,25 +39,11 @@
 }
 
 .animateIn {
-  animation-duration: 0.4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-play-state: running;
-  animation-name: in;
-  animation-fill-mode: both;
+  animation: in 0.4s ease 0s normal 1 both running;
 }
 
 .animateOut {
-  animation-duration: 0.4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-play-state: running;
-  animation-name: out;
-  animation-fill-mode: both;
+  animation: out 0.4s ease 0s normal 1 both running;
 }
 
 .show-success-msg {
