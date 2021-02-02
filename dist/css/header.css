@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**** Nav ****/
+.top-nav {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.125rem;
+  padding: 0 1.25rem;
+}
+
+@media (max-width: 576px) {
+  .top-nav {
+    padding: 0 0.3rem;
+  }
+}
+
+.top-nav ul {
+  list-style: none;
+}
+
+.top-nav button {
+  font-family: 'Barlow', sans-serif;
+  text-transform: capitalize;
+  font-size: 1rem;
+  border: 1px solid #eee;
+  border-width: 0 0 1px 0;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.top-nav button:focus {
+  outline: blue thin dotted;
+}
+
+.top-nav button > span {
+  pointer-events: none;
+}
+
+.top-nav .copy-bar {
+  position: relative;
+  width: 16.9rem;
+}
+
+@media (max-width: 576px) {
+  .top-nav .copy-bar {
+    width: 15.9rem;
+  }
+}
+
+.top-nav .copy-bar > button {
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  border-radius: 0.2rem;
+  width: 100%;
+}
+
+.top-nav .copy-bar .triangle {
+  margin-left: 1rem;
+}
+
+.top-nav .submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150%;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.top-nav .submenu button {
+  width: 100%;
+}
+
+.top-nav .submenu li:first-of-type button {
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.top-nav .submenu li:last-of-type button {
+  border: 0;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.top-nav .submenu li button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.top-nav .submenu-show {
+  display: block;
+}
+
+.top-nav .submenu-show button {
+  display: block;
+}
+
+.top-nav .sound-btn {
+  width: 6.5rem;
+  border: 0;
+  transition: 0.1s;
+}
+
+@media (max-width: 576px) {
+  .top-nav .sound-btn {
+    width: 1rem !important;
+  }
+}
+
+.top-nav .main-btn:active,
+.top-nav .sound-btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 576px) {
+  .top-nav .sound-text {
+    display: none;
+  }
+}

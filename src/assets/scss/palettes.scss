@@ -1,26 +1,5 @@
 /*** Palette container ***/
-$nav-height: 3.125rem;
-$laptop-screen: 1024px;
-$tablet-screen: 768px;
-$mobile-screen: 576px;
-
-@mixin respond-to-screen($breakpoint) {
-  @if $breakpoint == laptop {
-    @media (max-width: $laptop-screen) {
-      @content;
-    }
-  }
-  @if $breakpoint == tablet {
-    @media (max-width: $tablet-screen) {
-      @content;
-    }
-  }
-  @if $breakpoint == mobile {
-    @media (max-width: $mobile-screen) {
-      @content;
-    }
-  }
-}
+@import 'config';
 
 .palette-container {
   height: calc(100vh - #{$nav-height});

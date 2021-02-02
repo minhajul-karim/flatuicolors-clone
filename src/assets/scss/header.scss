@@ -1,24 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
-
-$nav-height: 3.125rem;
-$small-screen: 576px;
-
-@mixin respond-small-screen {
-  @media (max-width: $small-screen) {
-    @content;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Barlow', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import 'config';
 
 /**** Nav ****/
 .top-nav {
@@ -28,7 +9,7 @@ body {
   align-items: center;
   height: $nav-height;
   padding: 0 1.25rem;
-  @include respond-small-screen {
+  @include respond-to-screen(mobile) {
     padding: 0 0.3rem;
   }
 
@@ -59,7 +40,7 @@ body {
   .copy-bar {
     position: relative;
     width: 16.9rem;
-    @include respond-small-screen {
+    @include respond-to-screen(mobile) {
       width: 15.9rem;
     }
     > button {
@@ -109,7 +90,7 @@ body {
     width: 6.5rem;
     border: 0;
     transition: 0.1s;
-    @include respond-small-screen {
+    @include respond-to-screen(mobile) {
       width: 1rem !important;
     }
   }
@@ -120,7 +101,7 @@ body {
   }
 
   .sound-text {
-    @include respond-small-screen {
+    @include respond-to-screen(mobile) {
       display: none;
     }
   }
