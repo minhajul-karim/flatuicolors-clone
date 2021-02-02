@@ -1,14 +1,25 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import { useGlobalContext } from './context'
 import Header from './components/Header'
 import Palettes from './components/Palettes'
 import Success from './components/Success'
-import { useGlobalContext } from './context'
 
 function App() {
-  const { setHasShownSubmenu, color } = useGlobalContext()
+  const { setHasShownSubmenu, showSuccessMsg, setShowSuccessMsg, color } = useGlobalContext()
+
+  // Display success message for a second
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setShowSuccessMsg(false)
+    }, 1000)
+    return () => clearTimeout(timeoutId)
+  }, [setShowSuccessMsg, showSuccessMsg])
+
+  if (showSuccessMsg) {
+    return <Success color={color} />
+  }
 
   return (
     /* This <div> element receives click event and closes the submenu 
@@ -19,7 +30,6 @@ function App() {
         if (!event.target.classList.contains('format-btn')) setHasShownSubmenu(false)
       }}
     >
-      <Success color={color} />
       <Header />
       <Palettes />
     </div>
