@@ -14,7 +14,11 @@ export default function Grid({ color }) {
 
   // Copy code to clipboard and play sound
   const copyHandler = () => {
-    navigator.clipboard.writeText(color[selectedColorFormat.name])
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(color[selectedColorFormat.name])
+    } else {
+      console.warn('Copy failed!')
+    }
     setColor(color)
     setShowSuccessMsg(true)
     // Scroll to top so that the success msg can spread
